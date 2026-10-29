@@ -1,0 +1,16 @@
+# Exact versions the smoke tests were run with (Python 3.13, CPU build of torch).
+# On a GPU box, install torch/torchvision from the index matching your CUDA
+# (see README "Training on EC2"), then `pip install -r requirements.txt`
+# picks up the rest. The original BiFormer repo pins torch==1.12.1 /
+# timm==0.8.15.dev0 / fairscale for Python 3.8; the vendored copy in
+# third_party/biformer works with the versions below and doesn't need fairscale.
+torch==2.11.0
+torchvision==0.26.0
+timm==1.0.29
+einops==0.8.2
+numpy==2.5.2
+pandas==2.3.2
+scikit-learn==1.7.1
+pillow==11.3.0
+# only for make_report.py (plots)
+matplotlib==3.11.2
